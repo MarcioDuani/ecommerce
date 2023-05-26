@@ -1,2 +1,2 @@
 # ecommerce
-front-end de um site ecommerce de eletrônicos
+Layout front-end de um site ecommerce de eletrônicos
