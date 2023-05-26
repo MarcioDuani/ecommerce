@@ -1,0 +1,342 @@
+/* zerando configurações de margens que vem por padrão no browser*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/* cor de fundo, texto e zerando margin do corpo da pagina*/
+
+body{
+background-color: rgb(25, 25, 25);
+color: white;
+margin: 0;
+
+}
+/*configurando cabeçalho, altura,largura cor de texto,tipo de display, alinhamento e espassamento entre os display itens*/
+
+.header{
+  width: 100%;
+  height: 80px;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  
+  
+}
+/* definindo um tamanho de fonte responsiva que se ajusta de acordo com tamanho da página para h1 do cabeçalho*/
+
+.header > h1{
+  font-size: 2rem;
+}
+
+/*configurando uma pseudo classe para mudar somente a aprimeira letra do h1 do cabeçalho*/
+
+h1::first-letter {
+  color: orange;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: black;
+  padding: 5px;
+}
+
+/*espassamento entres os elemetos dos icones do cabeçalho*/
+i{
+  padding: 2px;
+}
+
+/*inicio da barra de navegação responsiva, utilizei ex. do w3scool então mantive as configurações display em bloco dos exemplos.*/
+
+.topnav {
+  overflow: auto;
+  background-color: #e9e9e9; 
+  }
+
+/* alinhamento dos blocos , cor, espaçamento, sem decoração nos textos e tamanho da fonte*/
+
+  .topnav a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+/*pseudo classe que muda cor ao passar o curso sobre o bloco, definição da cores*/
+
+  .topnav a:hover {
+    background-color: #dddd;
+    color: black;
+  }
+/*configuração do bloco que vai ficar azul e texto branco fixos*/
+
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+/* posição bloco de busca */
+
+  .topnav .search-container {
+    float: left; 
+    margin-left: 10px;
+  }
+/* posição do menu categorias que expande em outras opções*/
+
+  .topnav .dropdown{
+    float: left;
+
+  }
+/*posição,espaçamento,margin e borda da caixa de texto da busca*/
+
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;  
+  }
+  /*configurações do botão de busca "lupa", posicionamento,espaçamento,margem do 
+  topo,cor de fundo,tamanho fonte,sem borda, e aparecer cursor*/
+  
+    .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /*pseudo classe do botão search, muda cor ao passar cursor em cima. */
+
+    .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  /*uso de midia para resposividade,atendendo as condições de tamanho, muda o tipo de 
+    posicionamento para alinhar um bloco em baixo do outro*/
+
+    @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button, .dropdown, .dropbtn{
+      float: none;
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+} 
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+background-color: #3e8e41;
+}
+
+.main{
+  width: 100%;
+  height: auto;
+  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+
+
+.card{
+  width: 230px;
+  height: auto;
+  padding: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  border: 1px solid gray;
+  background-color: rgb(50, 50, 50);
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+
+}
+
+
+.card > .imagem-produto{
+  width: 50%;
+}
+
+.card > .titulo{
+  
+  text-align: start;
+  font-size: 1rem;
+  font-weight: bold;
+  
+}
+
+a.button {
+    
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  height: 35px;
+  background-color:#2196F3;
+  color:white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  justify-content: center;
+  padding:5px;
+  align-items: center;
+  align-self: baseline;
+  
+}
+a.button:hover{
+color:black;
+}
+.cadastro{
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  align-items: center;
+}
+
+.cabecalho{
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  border-top: 1px solid gray;
+  padding: 5px;
+
+
+}
+.conteiner-produto{
+  display: grid;
+  min-height: 100vh;
+  grid-auto-columns: 400px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: 
+  'titulo titulo'
+  'imagem detalhe'
+  ;
+}
+  
+ 
+.img-detalhe-produto{
+  grid-area: imagem;
+  display: flex;
+  width: 350px;
+  height: 350px;
+ justify-content: center;
+ margin-top: 10px;
+
+}
+.titulo-produto{
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  font-style: italic;
+  
+
+}
+.detalhe-produto{
+grid-area: detalhe;
+display: flex;
+justify-content: center;
+}
+.cabecalho2{
+  grid-area: cabecalho;
+  display: flex;
+}
+
+
+.botao-finalizar{
+  width: 500px;
+  height: 35px;
+  background-color: #3e8e41;
+  color: white;
+  display: flex;
+  padding: 25px;
+  align-items:center;
+  justify-content: center;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-left: 150px;
+}
+
+.botao-finalizar:hover{
+  color:black;
+}
+
+.botao-finalizar > a{
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .conteiner-produto{
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    'imagem'
+    'detalhe'
+    'titulo'
+    ;
+  }
+    .detalhe {display: none;}
+  }
+
